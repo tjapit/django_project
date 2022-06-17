@@ -23,12 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 from decouple import config
 
-SECRET_KEY = config("SECRET_KEY") # this is to replace the secret key you cut away before
+SECRET_KEY = config('SECRET_KEY') # this is to replace the secret key you cut away before
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG_VALUE')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['djangoproject-tj.herokuapp.com']
 
 
 # Application definition

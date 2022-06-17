@@ -17,3 +17,20 @@ py manage.py:
     >>> post_1.author.email //can get the author's email from a post/foreign key
     >>> user.post_set.first() //can also access the set of posts by the author ([user].[modelname]_set.[method])
     >>> user.post_set.create(title='Blog 3', content='Third Post Content!') //create another post using post_set
+
+Cross-origin Resource Sharing (CORS) JSON Template:
+[
+    {
+        "AllowedHeaders": [
+            "*"
+        ],
+        "AllowedMethods": [
+            "GET",
+            "POST",
+            "PUT"
+        ],
+        "AllowedOrigins": [
+            "https://djangoproject-tj.herokuapp.com/"
+        ]
+    }
+]

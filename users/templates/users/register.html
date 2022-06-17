@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+{% comment %} load crispy forms {% endcomment %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="content-section">
+    <form method="POST">
+        {% comment %} need to have csrf for django, otherwise form won't work
+        {% endcomment %}
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Join Today!</legend>
+            {% comment %} vertical bar (|) use crispy to style form {% endcomment %}
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-primary btn-block" type="submit">Sign
+                Up</button>
+        </div>
+    </form>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Already have an account? <a class="ml-1" href="{% url 'login' %}">Sign in</a>
+        </small>
+    </div>
+</div>
+{% endblock content %}

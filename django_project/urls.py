@@ -68,12 +68,12 @@ urlpatterns = [
         ),
         name='password_reset_complete'
     ),
-    # media url during development
-    re_path(
-        r'^media/(?P<path>.*)$', 
-        serve, 
-        {'document_root':settings.MEDIA_ROOT}
-    ),
+    # # media url during development
+    # re_path(
+    #     r'^media/(?P<path>.*)$', 
+    #     serve, 
+    #     {'document_root':settings.MEDIA_ROOT}
+    # ),
 
 ]
 

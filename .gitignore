@@ -3,7 +3,7 @@
 *.pyc
 __pycache__/
 _*.html
-profile_pics
+# profile_pics
 *.log
 local_settings.py
 db.sqlite3

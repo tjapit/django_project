@@ -31,6 +31,7 @@ Cross-origin Resource Sharing (CORS) JSON Template:
         ],
         "AllowedOrigins": [
             "https://djangoproject-tj.herokuapp.com/"
-        ]
+        ],
+        "ExposeHeaders": []
     }
 ]
